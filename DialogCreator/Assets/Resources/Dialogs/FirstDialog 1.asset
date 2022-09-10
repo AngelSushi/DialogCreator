@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0846f30dd7e6a74a946b01a8d8fbaf4, type: 3}
+  m_Name: FirstDialog 1
+  m_EditorClassIdentifier: 
+  name: MyFirstDialog1
+  author: Me
+  authorSprite: {fileID: 21300000, guid: 9e44d22ac4a097b4ab1b85659a86e754, type: 3}
+  isRepeatable: 0
+  pages:
+  - Je suis le plus beau de l'univers
