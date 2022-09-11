@@ -15,6 +15,6 @@ MonoBehaviour:
   name: MyFirstDialog
   author: Me
   authorSprite: {fileID: 21300000, guid: d14744e4d232c7b4b9b62af26c888578, type: 3}
-  isRepeatable: 0
+  isRepeatable: 1
   pages:
   - Je suis le plus beau de l'univers
