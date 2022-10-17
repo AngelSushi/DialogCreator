@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class DialogCreatorWindow : EditorWindow {
@@ -22,13 +24,15 @@ public class DialogCreatorWindow : EditorWindow {
 
     private bool selectionChange;
     private Dialog targetDialog;
+
+    private float time;
     
     void CreateGUI() {
         
         dialogs = Resources.LoadAll("Dialogs", typeof(Dialog)).Cast<Dialog>().ToArray();
        
 
-        InitViews();
+      /*  InitViews();
 
         list = new ListView();
 
@@ -46,11 +50,20 @@ public class DialogCreatorWindow : EditorWindow {
 
 
         list.onSelectionChange += OnDialogSelectionChange;
+        */
+      
 
     }
 
     private void OnGUI()
     {
+        
+        
+        Debug.Log("dialogs " + dialogs[0].authorSprite);
+      //  EditorGUILayout.ObjectField(dialogs[0].authorSprite,typeof(Sprite),false);
+        GUILayout.Label(dialogs[0].authorSprite);
+        
+        
         if (selectionChange)
         {
             //if(targetDialog.authorSprite != null)
@@ -59,6 +72,14 @@ public class DialogCreatorWindow : EditorWindow {
         //GUILayout.Label(Resources.Load<Texture>("Characters/character01"));
     }
 
+    private void Update()
+    {
+        time += Time.deltaTime;
+        
+      //  Debug.Log("timer " + time);
+
+    }
+    
     private void InitViews() {
         TwoPaneSplitView splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
         rootVisualElement.Add(splitView);
@@ -86,8 +107,10 @@ public class DialogCreatorWindow : EditorWindow {
         sprite.scaleMode = ScaleMode.ScaleToFit;
         sprite.sprite =  Resources.Load<Sprite>("dialogBackground");
 
-        Image authorSprite = new Image();
+      /*  Image authorSprite = new Image();
         authorSprite.sprite =  (selectedDialog.First() as Dialog).authorSprite;
+*/
+        
 
         Label labelName = new Label();
         labelName.text = "Nom: ";
@@ -138,8 +161,7 @@ public class DialogCreatorWindow : EditorWindow {
        // upPane.Add(obj);
         
         
-        
-        downPane.Add(authorSprite);
+       // downPane.Add(authorSprite);
         downPane.Add(sprite);
     }
 }

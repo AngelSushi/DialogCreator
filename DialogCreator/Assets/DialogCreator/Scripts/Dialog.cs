@@ -9,7 +9,7 @@ public class Dialog : ScriptableObject
 
     public string name;
     public string author;
-    public Sprite authorSprite;
+    public Texture2D authorSprite;
     public bool isRepeatable;
     public List<string> pages;
 

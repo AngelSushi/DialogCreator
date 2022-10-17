@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MyFirstDialog2
   author: Me
+  authorTex: {fileID: 2800000, guid: f48e561615afa3d45a2df3d4d79befae, type: 3}
   authorSprite: {fileID: 21300000, guid: f48e561615afa3d45a2df3d4d79befae, type: 3}
   isRepeatable: 0
   pages:
