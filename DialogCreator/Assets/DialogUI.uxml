@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Main" style="position: absolute; width: 455px; height: 152px; top: 3%; left: 143px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="Title" style="position: absolute; left: 0; top: 0; width: 100%; height: 15%; background-color: rgb(29, 29, 29);">
+            <ui:Label text="General" display-tooltip-when-elided="true" name="General" style="left: 0; top: 2%; justify-content: center; align-items: center; -unity-text-align: upper-center; font-size: 16px; -unity-font-style: bold; height: 19px; width: 455px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Field01" style="top: 31px; width: 100%; height: 24px;">
+            <ui:TextField picking-mode="Ignore" label="Dialog Name " value="dialogName" text="My Dialog" name="DialogName" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Field02" style="top: 31px; width: 100%; height: 24px;">
+            <ui:TextField picking-mode="Ignore" label="Author Name " value="authorName" text="My Name" name="AuthorName" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Field03" style="top: 31px; width: 100%; height: 24px;">
+            <ui:TextField picking-mode="Ignore" label="Content" text="each page separate by ; " name="Content" value="content" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Field04" style="top: 31px; width: 100%; height: 24px;">
+            <ui:DropdownField label="Startup" index="-1" choices="None ; LOL" name="Startup" focusable="false" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Field05" style="top: 31px; width: 100%; height: 24px;">
+            <ui:Toggle label="Repeatable" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="OtherCharacters" style="position: absolute; width: 455px; height: 152px; top: 32%; left: 143px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+        <ui:VisualElement name="Title" style="position: absolute; left: 0; top: 0; width: 100%; height: 15%; background-color: rgb(29, 29, 29);">
+            <ui:Label text="Characters" display-tooltip-when-elided="true" name="General" style="left: 0; top: 2%; justify-content: center; align-items: center; -unity-text-align: upper-center; font-size: 16px; -unity-font-style: bold; height: 19px; width: 455px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" name="DialogList" style="height: 597px; width: 127px; background-color: rgb(103, 13, 13);" />
+    <ui:VisualElement style="background-image: resource(&apos;dialogBackground&apos;); width: 467px; height: 89px; position: absolute; left: 138px; bottom: 7px;" />
+</ui:UXML>

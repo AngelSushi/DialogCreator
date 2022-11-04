@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0846f30dd7e6a74a946b01a8d8fbaf4, type: 3}
-  m_Name: FirstDialog 2
+  m_Name: NewDialog 3
   m_EditorClassIdentifier: 
-  name: MyFirstDialog2
-  author: Me
-  authorSprite: {fileID: 21300000, guid: f48e561615afa3d45a2df3d4d79befae, type: 3}
+  name: NewDialog 3
+  author: 
+  authorSprite: {fileID: 0}
   isRepeatable: 0
-  pages:
-  - Je suis le plus beau de l'univers
+  pages: []
   otherCharacters: []

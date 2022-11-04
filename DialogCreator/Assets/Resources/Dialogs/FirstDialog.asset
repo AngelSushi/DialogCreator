@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0846f30dd7e6a74a946b01a8d8fbaf4, type: 3}
   m_Name: FirstDialog
   m_EditorClassIdentifier: 
-  name: MyFirstDialog
-  author: Me
-  authorTex: {fileID: 2800000, guid: d14744e4d232c7b4b9b62af26c888578, type: 3}
-  authorSprite: {fileID: 21300000, guid: d14744e4d232c7b4b9b62af26c888578, type: 3}
-  isRepeatable: 1
+  name: FirstDialog
+  author: MeAndYou
+  authorSprite: {fileID: 21300000, guid: 9e44d22ac4a097b4ab1b85659a86e754, type: 3}
+  isRepeatable: 0
   pages:
-  - Je suis le plus beau de l'univers
+  - Je suis beau
+  - tu es beau
+  - 'nous sommes beau '
+  otherCharacters: []
