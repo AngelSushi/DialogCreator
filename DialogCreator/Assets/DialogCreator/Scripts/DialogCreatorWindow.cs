@@ -30,28 +30,30 @@ public class DialogCreatorWindow : EditorWindow {
     void CreateGUI() {
         
         dialogs = Resources.LoadAll("Dialogs", typeof(Dialog)).Cast<Dialog>().ToArray();
-       
 
-      /*  InitViews();
+        minSize = new Vector2(612, 636);
+        maxSize = minSize;
 
-        list = new ListView();
+        /*  InitViews();
+  
+          list = new ListView();
+  
+          list.makeItem = () => new Label();
+          list.bindItem = (item, index) =>
+          {
+              Label targetLabel = (Label)item;
+              targetLabel.text = dialogs[index].name;
+          };
+          list.itemsSource = dialogs;
+         
+         
+          leftPane.Add(list);
+         
+  
+  
+          list.onSelectionChange += OnDialogSelectionChange;
+          */
 
-        list.makeItem = () => new Label();
-        list.bindItem = (item, index) =>
-        {
-            Label targetLabel = (Label)item;
-            targetLabel.text = dialogs[index].name;
-        };
-        list.itemsSource = dialogs;
-       
-       
-        leftPane.Add(list);
-       
-
-
-        list.onSelectionChange += OnDialogSelectionChange;
-        */
-      
 
     }
 
@@ -61,7 +63,7 @@ public class DialogCreatorWindow : EditorWindow {
         
         Debug.Log("dialogs " + dialogs[0].authorSprite);
       //  EditorGUILayout.ObjectField(dialogs[0].authorSprite,typeof(Sprite),false);
-        GUILayout.Label(dialogs[0].authorSprite);
+       // GUILayout.Label(dialogs[0].authorSprite);
         
         
         if (selectionChange)
@@ -78,24 +80,6 @@ public class DialogCreatorWindow : EditorWindow {
         
       //  Debug.Log("timer " + time);
 
-    }
-    
-    private void InitViews() {
-        TwoPaneSplitView splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
-        rootVisualElement.Add(splitView);
-
-        leftPane = new VisualElement();
-        splitView.Add(leftPane);
-        rightPane = new VisualElement();
-        splitView.Add(rightPane);
-       
-        TwoPaneSplitView splitRightView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Vertical);
-        rightPane.Add(splitRightView);
-       
-        upPane = new VisualElement();
-        splitRightView.Add(upPane);
-        downPane = new VisualElement();
-        splitRightView.Add(downPane);
     }
 
     private void OnDialogSelectionChange(IEnumerable<object> selectedDialog) {

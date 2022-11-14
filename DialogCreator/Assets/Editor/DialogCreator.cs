@@ -51,6 +51,10 @@ public class DialogCreator : EditorWindow
         parent.Q<Button>("Add").clicked += OnCreateDialog;
         
         lastTime = DateTime.UtcNow;
+        
+        
+        minSize = new Vector2(612, 636);
+        maxSize = minSize;
     }
 
     private void AddMissingElements(VisualElement labelFromUXML) {
